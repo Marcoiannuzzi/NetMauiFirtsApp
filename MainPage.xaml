@@ -2,20 +2,43 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MicrosoftLearnApp.MainPage">
-    <VerticalStackLayout Spacing="10" Margin="10">
+    <VerticalStackLayout Spacing="20" Margin="10">
         <Image Source="images.png"
-                   SemanticProperties.Description="The dot net bot waving hello!"
-                   HeightRequest="64" />
-        
-        <HorizontalStackLayout Spacing="10">
-            
-            <Label FontSize="22" FontAttributes="Bold" Text="Notes" VerticalOptions="End" />
-            <Label FontSize="22" Text="v1.0" VerticalOptions="End" />
-        </HorizontalStackLayout>
+                   SemanticProperties.Description="tasklist image"
+                   WidthRequest="100" />
 
-        <Label Text="This app is written in XAML and C# with .NET MAUI." />
-        <Button Text="Enviar" 
-                Clicked="Enviar" />
+        <HorizontalStackLayout Spacing="10"
+                               HorizontalOptions="CenterAndExpand">
+         
+        </HorizontalStackLayout>
+           <Label Text="Lista de Tareas Pendientes"
+                  HorizontalOptions="Center"
+                  FontSize="35"/>
+        
+           <Entry x:Name="input"
+                  Placeholder="ingresa la tarea pendiente"
+                  HorizontalOptions="Center"
+                  WidthRequest="450"/>
+        
+           <Button Text="Enviar" 
+                   Clicked="Enviar"
+                   HorizontalOptions="Center"
+                   BackgroundColor="DarkOrange"/>
+
+           <Label x:Name="tarea"
+                  HorizontalOptions="Center"
+                  FontSize="20"/>
+
+           <Button Text="Terminado"
+                   HorizontalOptions="Center"
+                   BackgroundColor="DarkOrange"
+                   Clicked="Button_Clicked"/>
+
+       
+
+
+
+
     </VerticalStackLayout>
 
 

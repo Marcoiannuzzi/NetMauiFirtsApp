@@ -10,9 +10,13 @@ public partial class MainPage : ContentPage
 
     public void Enviar(object sender, EventArgs args)
     {
-        DisplayAlert("Button Clicked", "You clicked the button", "OK");
+        tarea.Text = input.Text;
+        input.Text = "";
     }
 
-
+    private void Button_Clicked(object sender, EventArgs e)
+    {
+        tarea.Text += "  - Tarea terminada";
+    }
 }
 
